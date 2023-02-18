@@ -1,0 +1,33 @@
+{
+  "name": "next-nest-auth",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Wesley Barbosa <wesley.barbosa.developer@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "lerna run dev",
+    "dev:back": "lerna run dev --scope back-end",
+    "dev:front": "lerna run dev --scope front-end",
+    "build": "lerna run build",
+    "build:back": "lerna run build --scope back-end",
+    "build:front": "lerna run build --scope front-end",
+    "start": "lerna run start",
+    "start:back": "lerna run start --scope back-end",
+    "start:front": "lerna run start --scope front-end",
+    "prepare": "husky install",
+    "commit": "git-cz"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.3",
+    "lerna": "^6.4.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

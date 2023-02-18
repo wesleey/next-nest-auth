@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  app:
+    build: .
+    container_name: back-end-app
+    entrypoint: dockerize -wait tcp://db:5432 -timeout 30s ./entrypoint.sh
+    ports:
+      - 3333:3333
+    volumes:
+      - .:/home/node/app
+    extra_hosts: 
+      - "localhost:172.17.0.1"
+    depends_on: 
+      - db
+
+  db:
+    build: ./.docker/postgres
+    container_name: back-end-db
+    restart: always
+    tty: true
+    ports:
+      - 5432:5432
+    volumes:
+      - ./.docker/postgres/pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=mydb
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
