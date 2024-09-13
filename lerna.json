@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "npmClient": "yarn",
+  "packages": [
+    "back-end",
+    "front-end"
+  ],
+  "command": {
+    "version": {
+      "message": "chore(release): publish %s"
+    }
+  }
+}

@@ -1,0 +1,183 @@
+@API=http://localhost:3333
+@ACCESS_TOKEN=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjYzc0M2VlOC0yYmJhLTRkZTItOTA0NC01M2IyZTRhNDUxOGMiLCJuYW1lIjoiSm9obiBEb2UiLCJlbWFpbCI6ImpvaG5kb2VAZ21haWwuY29tIiwicm9sZSI6IlVTRVIiLCJ0eXAiOiJCZWFyZXIiLCJzZXNzaW9uX3N0YXRlIjoiMDQ3MmE3ZDctOTg1MS00MzBkLTk3ODgtMzQ0ZDU5ZmI1Y2Y4Iiwic2lkIjoiMDQ3MmE3ZDctOTg1MS00MzBkLTk3ODgtMzQ0ZDU5ZmI1Y2Y4IiwiaWF0IjoxNjc2NTY1OTQwLCJleHAiOjE2NzY1NjYyNDB9.E7N9cUCTWyhvKbU0hZ4qeLhiFXDglkTBBELqIcmMuw68iJ-Sxs1mwW-UIA_KD1RYI-LHhWfWYKbS--pnj8Lir0Ko_m3Z-iY0JnkR9nV2vZbHKUuWS-ZiCZjskC6gbpbbF2usvXONT3waN2oFU-or3YKnf-JlTj8yssBnrhzivKZLRaj0yiIALaymyNdXWuxk093h-ENzZr1lo5WShiEJPN14SzekiooB8JeMReP-a1nB6TmPr1oi68WOyu62vTWPZ_aA_mBHoQPnvu2PMUpPSTe6mAzTNrIqdABXxHPnXS1Lpk28E2t-o-c0U15jCWPWpZK1JPb_Sp4bCH9Y2YbbHDNvkFptU_LOHeW-Cg2NNUDrD8AUDHG3sbVxDUy7zMACQoHflhflHkQgAghsCsAGTgfpfHh9tYqrDUIFuAFwf7NLkAXHX3NiJBtD6gJhuqqf3sYfJHjNoO3jyiokZkSz-wnXWnboYfdZcg8CYGlCfbGOH2WZkp5_eKqh4w_AztKDG-4CXeRLBJRyJKDjPVJwTJyaq2Mr857y30pqyn15OOVy3tB4jqgNPYp7qwaVnaxSytwtyKa81ne-4ZRd6idWcAFN5NRMktrFfO518s4DAAUfZ2RcuUSvozcXcfcL3ECdWVZOyUwKOIrVDuKq-_Ld_YDCxMljtUcv-XVpG76DQMY
+@REFRESH_TOKEN=eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3NGQ0MTAwMi04OWFhLTQ1ODktODMxMC0zMDU0YTBlMzliMDQiLCJ0eXAiOiJSZWZyZXNoIiwic2Vzc2lvbl9zdGF0ZSI6IjFmY2ZlNzk5LTYyNTQtNDIzMi05OGI4LTBjMThmZjAwMmFiZCIsInNpZCI6IjFmY2ZlNzk5LTYyNTQtNDIzMi05OGI4LTBjMThmZjAwMmFiZCIsImlhdCI6MTY3NjU2NTQ1NiwiZXhwIjoxNjc2NTY5MDU2fQ.hjnj3bW9M2FAH_K2kkAY85lyqFRmVYJRUDerS9x79lOH916VB7fgYiPAmJ-a6JciLiDJ3btlwRr7W_OI_aXDyPeH7wD1c-8fhN8YfRgYp5jJOkiUz2gTLGJepk3ZKhVVIs1Qhnkkt2LbgWs9oIMZXOQKkCG_k7ZAIUfG2faCxqmUw4KEgGZeBUw219-lyR5o-ZnhXWV5_p28B0Rg7xUhnLRo3zbjwMQ2xRDjMa6tmu1-XujaqrVn_9wLSqYgLaDIE9hQHLwQ-gvqJIfEUgvGOgGiKRW9GlhNT-6CsLOoiFZV6-sgB2V1-LtQOUdrcifJKgoKPK8hfNnN4HIO4hL_63crYGDuJrfUl5aT0vIar6ryDhVM5Boqtz7u9zP1TF0NmqKryB1b_59dAHMskmAyc8Z5OPnK6eBtl-PVyN2f3WyXSf1LBy62gXzk9iywes8DP4xGMx5rWseTlGQUkc6eMhCOuqmWAfvhb90Y7OHMRHP39QzJ9j6ksccBZmF7ia8qAbWSZXvLUA_HX7t2eenAnMDseinLiLx2vn_5YdChUB4QjEiCQ2YGN1Z7uiehbHjEnvc1nxqV5oDCXn6GqIkYJQdeXkG0s_vB77gmqvT6bYvzcoN9ZcNbNErw2LILmHeQ2YgTD17KvBoytAXunufU9DucgkcAuC3OQkP5VBsRr8weyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjYzc0M2VlOC0yYmJhLTRkZTItOTA0NC01M2IyZTRhNDUxOGMiLCJ0eXAiOiJSZWZyZXNoIiwic2Vzc2lvbl9zdGF0ZSI6IjA0NzJhN2Q3LTk4NTEtNDMwZC05Nzg4LTM0NGQ1OWZiNWNmOCIsInNpZCI6IjA0NzJhN2Q3LTk4NTEtNDMwZC05Nzg4LTM0NGQ1OWZiNWNmOCIsImlhdCI6MTY3NjU2NTk0MCwiZXhwIjoxNjc2NTY5NTQwfQ.1mTz-74wli1jjKM3aub_JhVKlMNNM1HlYg-xeGeI1W-IdCaVnVN_Z91owy_KeVjhqRWzBG_iRkHB24Fjr9JYCfGFgPax4DIX4Un90_xYov7-CrIlrwHFhhTHCVBomSNssIRbi3HjbC66tiRn4P-5y_0VTficUA0HzWFxOal4nb7oedy3kdmKQF1J4LHBlNxUnTV0RfblyRlqU9WoI20ReaqBjln-a40Hn-rcfPGFwhGj_Mq9XSg_NOnxjF92xJ2vCbgPQyqDxY1aaf5OJIwxSOOOV3NOvXBUpgigQGPB4pgNFsll53Uxu-3LJDAbTj5cAvQKn-YQ3BjsREvIRN_QbngyDKk1xV5qxq4vMN_q0nnK0E8iMgkMnIBLeCsGs4Y1Vad_hiBcV5dIfRBrUG96dNoQTUjqJ5ZGhmXBONkKAMdVkp5ztaIOu0n79ba7WZxZ3rocDYsqzegGFA24Xj5yugQ5GYscrMek0sV6SMtH0x9ySqZq_F-pzuvQIrX2rlC4o5veygNDrJJLg93SPWytzTTjG6exlBXCKY8voYrXMuqBnnSGwqqBqDM1sws0vwmTWYnTotIxYPYfZNKE17-JcdTOSA2w4-r2OKhzR2lxmrLLtb40UxiJwsTj3V5zUp0gNwXIe9-cEY_vUtOz4HZbl9rrJmFeczAco5UqZBIK36o
+
+
+
+############### AUTH ###############
+
+
+
+####################################
+###        REGISTER USER         ###
+####################################
+POST {{API}}/auth/register
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "johndoe@gmail.com",
+  "password": "password123"
+}
+
+
+####################################
+###            LOGIN             ###
+####################################
+POST {{API}}/auth/login
+Content-Type: application/json
+
+{
+  "email": "johndoe@gmail.com",
+  "password": "password123"
+}
+
+
+####################################
+###     REFRESH CREDENTIALS      ###
+####################################
+### * access: PRIVATE            ###
+####################################
+GET {{API}}/auth/refresh
+Authorization: Bearer {{REFRESH_TOKEN}}
+
+
+####################################
+###            LOGOUT            ###
+####################################
+### * access: PRIVATE            ###
+####################################
+GET {{API}}/auth/logout
+Authorization: Bearer {{ACCESS_TOKEN}}
+
+
+####################################
+###       GET USER PROFILE       ###
+####################################
+### * access: PRIVATE            ###
+####################################
+GET {{API}}/auth/profile
+Authorization: Bearer {{ACCESS_TOKEN}}
+
+
+
+############# SESSION ##############
+
+
+
+####################################
+###        CREATE SESSION        ###
+####################################
+### * access: PRIVATE            ###
+### * role:   ADMIN              ###
+####################################
+POST {{API}}/sessions
+Authorization: Bearer {{ACCESS_TOKEN}}
+Content-Type: application/json
+
+{
+  "user_id": "231324f6-9bd0-4f7f-a2e5-666d0ba4441f"
+}
+
+
+####################################
+###       FIND ONE SESSION       ###
+####################################
+### * access: PRIVATE            ###
+### * role:   ADMIN              ###
+####################################
+GET {{API}}/sessions/2e7d33f3-106c-431a-968f-9725fb7fbbf5
+Authorization: Bearer {{ACCESS_TOKEN}}
+
+
+####################################
+###        REMOVE SESSION        ###
+####################################
+### * access: PRIVATE            ###
+### * role:   ADMIN              ###
+####################################
+DELETE {{API}}/sessions/2e7d33f3-106c-431a-968f-9725fb7fbbf5
+Authorization: Bearer {{ACCESS_TOKEN}}
+
+
+
+############### USER ###############
+
+
+
+####################################
+###         CREATE USER          ###
+####################################
+### * access: PRIVATE            ###
+### * role:   ADMIN              ###
+####################################
+POST {{API}}/users
+Authorization: Bearer {{ACCESS_TOKEN}}
+Content-Type: application/json
+
+{
+  "name": "Wesley Barbosa",
+  "email": "wesleybarbosa@gmail.com",
+  "password": "barbosa123",
+  "role": "ADMIN",
+}
+
+
+####################################
+###        FIND ALL USERS        ###
+####################################
+GET {{API}}/users
+
+
+####################################
+###        FIND ONE USER         ###
+####################################
+GET {{API}}/users/231324f6-9bd0-4f7f-a2e5-666d0ba4441f
+
+
+####################################
+###     UPDATE CURRENT USER      ###
+####################################
+### * access: PRIVATE            ###
+####################################
+PATCH {{API}}/users
+Authorization: Bearer {{ACCESS_TOKEN}}
+Content-Type: application/json
+
+{
+  "email": "john123@gmail.com"
+}
+
+
+####################################
+###     REMOVE CURRENT USER      ###
+####################################
+### * access: PRIVATE            ###
+####################################
+DELETE {{API}}/users
+Authorization: Bearer {{ACCESS_TOKEN}}
+
+
+####################################
+###         UPDATE USER          ###
+####################################
+### * access: PRIVATE            ###
+### * role:   ADMIN              ###
+####################################
+PATCH {{API}}/users/231324f6-9bd0-4f7f-a2e5-666d0ba4441f
+Authorization: Bearer {{ACCESS_TOKEN}}
+Content-Type: application/json
+
+{
+  "email": "john123@gmail.com"
+}
+
+
+####################################
+###         REMOVE USER          ###
+####################################
+### * access: PRIVATE            ###
+### * role:   ADMIN              ###
+####################################
+DELETE {{API}}/users/231324f6-9bd0-4f7f-a2e5-666d0ba4441f
+Authorization: Bearer {{ACCESS_TOKEN}}
